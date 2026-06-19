@@ -4,3 +4,8 @@ data/
 .env.*
 *.log
 .DS_Store
+
+# Design assets & drafts — niepotrzebne w deploymencie
+"Waiting list landing aplikacji (3)"/
+chart_16250142*.png
+idea.md
