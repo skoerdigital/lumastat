@@ -74,6 +74,31 @@
 }
 </script>
 
+<!-- ═══ FAQ Schema ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Do I need a cookie consent banner with Lumastat?","acceptedAnswer":{"@type":"Answer","text":"No. Lumastat sets no cookies and collects no personally identifiable information, so there is no legal trigger for a GDPR or ePrivacy consent banner. You get full behavioural analytics on your pages with zero consent overhead."}},
+    {"@type":"Question","name":"Is Lumastat GDPR compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes — by structural design, not by configuration. Lumastat never stores personal data. IP addresses are hashed daily and cannot be reversed. Sessions are not linked across days, devices, or pages in any way that constitutes personal data processing under GDPR Article 4. Infrastructure runs inside the EEA. No Data Processing Agreement is required."}},
+    {"@type":"Question","name":"What data does Lumastat actually collect?","acceptedAnswer":{"@type":"Answer","text":"Lumastat collects page-level behavioural signals: scroll depth, click coordinates, active time on page, navigation path within a session, UTM parameters from the URL, and device category. It does not collect names, email addresses, raw IP addresses, device fingerprints, or any data that could identify a specific person."}},
+    {"@type":"Question","name":"How does cookieless analytics actually work?","acceptedAnswer":{"@type":"Answer","text":"Instead of setting a cookie to follow a user across visits, Lumastat analyses each page visit independently. Behavioural signals are aggregated server-side and attached to the page URL rather than to any individual. Every metric is page-scoped, not person-scoped."}},
+    {"@type":"Question","name":"How accurate is cookieless analytics compared to cookie-based tools?","acceptedAnswer":{"@type":"Answer","text":"For page-level insights — heatmaps, scroll depth, exit patterns, funnel drop-offs — cookieless analytics is highly accurate and often more complete, because it is not skewed by visitors who declined the consent banner. The trade-off is that individual user journeys across multiple sessions cannot be traced."}},
+    {"@type":"Question","name":"What are frustration signals and rage clicks?","acceptedAnswer":{"@type":"Answer","text":"Frustration signals are behavioural patterns indicating a visitor encountered something broken or confusing. Rage clicks are rapid repeated clicks on an unresponsive element. Dead clicks are clicks on non-interactive elements that look clickable. Both are automatically detected by Lumastat."}},
+    {"@type":"Question","name":"What is scroll depth tracking and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"Scroll depth measures how far down a page a visitor scrolled before leaving. When correlated with exit rate, it reveals whether visitors leave because they never found the information they needed (low scroll) or because nothing convinced them after reading (high scroll, high exit). The two causes require completely different fixes."}},
+    {"@type":"Question","name":"What is a heatmap and how does it help my website?","acceptedAnswer":{"@type":"Answer","text":"A heatmap overlays a screenshot of your page with colour-coded zones showing where visitors clicked, moved, or tapped. Warmer colours indicate higher activity. Heatmaps show which sections attract attention, which calls-to-action get clicks, and which content is ignored. Lumastat generates heatmaps from aggregated click coordinates, without cookies."}},
+    {"@type":"Question","name":"What are session funnels?","acceptedAnswer":{"@type":"Answer","text":"Session funnels show the sequence of pages visited within a single browsing window and reveal where visitors exit. For multi-step flows they pinpoint the exact step causing the most drop-off, so you know where to focus optimisation effort."}},
+    {"@type":"Question","name":"Can Lumastat detect bots, scrapers, and AI crawlers?","acceptedAnswer":{"@type":"Answer","text":"Yes. A server-side module analyses request patterns and behavioural signals to separate human visits from automated traffic — search engine crawlers, scraper bots, AI training agents, and uptime monitors. Bot visits are excluded from all analytics metrics by default."}},
+    {"@type":"Question","name":"Does Lumastat work when visitors have ad blockers installed?","acceptedAnswer":{"@type":"Answer","text":"Lumastat is designed to be adblocker-resistant because all data collection happens server-side. There is no third-party tracking script loaded from an external domain that ad blockers intercept."}},
+    {"@type":"Question","name":"What is the difference between Lumastat and Google Analytics?","acceptedAnswer":{"@type":"Answer","text":"Google Analytics (GA4) tracks individuals across sessions using cookies and device IDs, requires a GDPR consent banner, and routes data through Google's US-based infrastructure. Lumastat tracks behaviour per page without cookies, stores no personal data, keeps data inside the EEA, and focuses on why visitors leave a specific page rather than who they are."}},
+    {"@type":"Question","name":"How does Lumastat compare to Hotjar?","acceptedAnswer":{"@type":"Answer","text":"Hotjar collects session recordings and heatmaps using cookies and requires user consent. Lumastat covers similar visual analytics — heatmaps, scroll depth, click patterns — without cookies or a consent banner, and adds UTM attribution, bot filtering, and frustration signals, oriented towards marketers who need conversion insight without a compliance layer."}},
+    {"@type":"Question","name":"What type of website is Lumastat designed for?","acceptedAnswer":{"@type":"Answer","text":"Lumastat is built for pages where a single visit determines whether a visitor converts: product pages, sales landing pages, blog posts, e-commerce pages, and marketing microsites. It is not designed for tracking authenticated workflows inside SaaS dashboards or complex web applications."}},
+    {"@type":"Question","name":"Where is visitor data stored?","acceptedAnswer":{"@type":"Answer","text":"All data is processed and stored on infrastructure hosted within the European Economic Area (EEA). Data never leaves EU jurisdiction, complying with GDPR Chapter V requirements on international transfers by default."}}
+  ]
+}
+</script>
+
 <!-- ═══ Fonts ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -822,6 +847,34 @@ a:focus-visible,button:focus-visible,input:focus-visible{
   .features-bento{grid-template-columns:1fr;gap:12px}
   .fb-card{padding:24px}
 }
+
+/* ── FAQ ── */
+.faq-wrap{max-width:860px;margin:0 auto}
+.faq-item{border-bottom:1px solid #E4E0D2}
+.faq-item:first-child{border-top:1px solid #E4E0D2}
+.faq-item summary{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  padding:22px 0;cursor:pointer;list-style:none;
+  font-size:17px;font-weight:600;line-height:1.4;color:#16160F;gap:20px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-icon{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;margin-top:1px;
+  background:#F1EEE3;border:1.5px solid #E4E0D2;
+  display:flex;align-items:center;justify-content:center;color:#16160F;
+  transition:transform .22s ease,background .22s ease,color .22s ease,border-color .22s ease;
+}
+.faq-item[open]>summary .faq-icon{
+  transform:rotate(45deg);background:#16160F;color:#F1EEE3;border-color:#16160F;
+}
+.faq-answer{
+  padding:0 46px 24px 0;
+  font-size:15.5px;line-height:1.65;color:#626255;
+}
+@media(max-width:768px){
+  .faq-item summary{font-size:15.5px}
+  .faq-answer{padding-right:0}
+}
 </style>
 </head>
 <body>
@@ -1477,6 +1530,98 @@ a:focus-visible,button:focus-visible,input:focus-visible{
   </div>
 </section>
 
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div style="text-align:center;max-width:640px;margin:0 auto 52px">
+    <div class="section-badge"><span class="section-badge-dot" aria-hidden="true"></span>FAQ</div>
+    <h2 class="h2-xl" id="faq-heading">Questions we get<br>asked a lot.</h2>
+  </div>
+
+  <div class="faq-wrap">
+
+    <details class="faq-item">
+      <summary>Do I need a cookie consent banner with Lumastat?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">No. Lumastat sets no cookies and collects no personally identifiable information, so there is no legal trigger for a GDPR or ePrivacy consent banner. You get full behavioural analytics on your pages with zero consent overhead.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is Lumastat GDPR compliant?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Yes — by structural design, not by configuration. Lumastat never stores personal data. IP addresses are hashed daily and cannot be reversed. Sessions are not linked across days, devices, or pages in any way that constitutes personal data processing under GDPR Article 4. Infrastructure runs inside the EEA. No Data Processing Agreement is required.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What data does Lumastat actually collect?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Lumastat collects page-level behavioural signals: scroll depth, click coordinates, active time on page, navigation path within a session, UTM parameters from the URL, and device category (desktop / mobile / tablet). It does not collect names, email addresses, raw IP addresses, device fingerprints, or any data that could identify a specific person.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does cookieless analytics actually work?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Instead of setting a cookie to follow a user across visits, Lumastat analyses each page visit independently. Behavioural signals — scroll depth, click positions, active engagement time — are aggregated server-side and attached to the page URL rather than to any individual. Every metric is page-scoped, not person-scoped.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>How accurate is cookieless analytics compared to cookie-based tools?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">For page-level insights — heatmaps, scroll depth, exit patterns, funnel drop-offs — cookieless analytics is highly accurate and often more complete than cookie-based tools, because it is not skewed by visitors who declined the consent banner. The trade-off is that individual user journeys across multiple sessions cannot be traced. For landing pages and content sites this is rarely a limitation.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What are frustration signals and rage clicks?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Frustration signals are behavioural patterns that indicate a visitor encountered something broken, confusing, or misleading. Rage clicks are rapid repeated clicks on an element that does not respond. Dead clicks are clicks on non-interactive elements that visually imply they are clickable. Both are automatically detected by Lumastat and highlight UI problems that raw visitor counts would never surface.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What is scroll depth tracking and why does it matter?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Scroll depth measures how far down a page a visitor scrolled before leaving, expressed as a percentage of total page height. When correlated with exit rate, it tells you whether visitors leave because they never found the information they were looking for (low scroll depth) or because nothing on the page convinced them after reading it (high scroll depth, high exit). The two causes require completely different fixes.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What is a heatmap and how does it help my website?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">A heatmap overlays a screenshot of your page with colour-coded zones showing where visitors clicked, moved, or tapped — warmer colours indicate higher activity. Heatmaps make it immediately visible which sections attract attention, which calls-to-action receive clicks, and which content is completely ignored. Lumastat generates heatmaps from aggregated click coordinates, without cookies and without a consent banner.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What are session funnels?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Session funnels show the sequence of pages visited within a single browsing window and reveal where visitors exit the site. For multi-step flows — product page → cart → checkout — funnels pinpoint the exact step causing the most drop-off, so you know where to focus optimisation effort instead of guessing.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does UTM attribution work in Lumastat?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">UTM parameters are tags appended to URLs in marketing campaigns (e.g. ?utm_source=newsletter&amp;utm_medium=email). Lumastat reads these from the URL on arrival and associates the session's behavioural data — scroll depth, clicks, engagement time, exit point — with that specific campaign source. You can see which channels send visitors who genuinely engage versus those who bounce within seconds.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can Lumastat detect bots, scrapers, and AI crawlers?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Yes. A server-side module analyses request patterns, timing, and behavioural signals to separate human visits from automated traffic — search engine crawlers, scraper bots, AI training agents, and uptime monitors. Bot visits are excluded from all analytics metrics by default, so heatmaps and engagement numbers reflect genuine human behaviour only.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does Lumastat work when visitors have ad blockers installed?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Lumastat is designed to be adblocker-resistant because all data collection happens server-side. There is no third-party tracking script loaded from an external domain that ad blockers routinely intercept. The result is a more complete picture of visitor behaviour than tools that depend on client-side JavaScript which can be silently blocked.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What is the difference between Lumastat and Google Analytics?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Google Analytics (GA4) tracks individuals across sessions using cookies and device IDs, requires a GDPR consent banner, routes data through Google's US-based advertising infrastructure, and is designed for audience segmentation and attribution modelling. Lumastat tracks behaviour per page without cookies, stores no personal data, keeps data inside the EEA, and is focused on answering why visitors leave a specific page rather than who they are.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does Lumastat compare to Hotjar?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Hotjar collects session recordings and heatmaps using cookies and requires user consent under GDPR and ePrivacy. It is a powerful UX research tool aimed at product and design teams. Lumastat covers similar visual analytics — heatmaps, scroll depth, click patterns — without cookies or a consent banner, and adds UTM attribution, bot filtering, and frustration signals. It is oriented towards marketers and website owners who need conversion insight without a compliance layer.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What type of website is Lumastat designed for?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">Lumastat is built for pages where a single visit determines whether a visitor converts: product pages, sales landing pages, blog posts, e-commerce category and product detail pages, and marketing microsites. It is not designed for tracking authenticated user workflows inside SaaS dashboards or complex web applications, where a different class of analytics tool is more appropriate.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Where is visitor data stored and is it safe?<span class="faq-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></summary>
+      <p class="faq-answer">All data is processed and stored on infrastructure hosted within the European Economic Area (EEA). Data never leaves EU jurisdiction, which means Lumastat's data handling complies with GDPR Chapter V requirements on international transfers by default — without needing Standard Contractual Clauses or other transfer mechanisms.</p>
+    </details>
+
+  </div>
+</section>
+
 <!-- ═══════════════ FINAL CTA ═══════════════ -->
 <div class="cta-section" id="waitlist">
   <div class="cta-inner">
@@ -1707,6 +1852,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{
       tag('#compare-heading','reveal');
       tag('#compare .text-lead','reveal',function(){return'.12s';});
       /* Badges */
+      tag('#faq .h2-xl','reveal');
+      tag('.faq-item','reveal',function(i){return(i*.04)+'s';});
       tag('.section-badge','reveal-scale');
       tag('.privacy-badge','reveal-scale');
       /* Built-for section */
