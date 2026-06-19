@@ -1,0 +1,17 @@
+{
+  "name": "Lumastat Analytics",
+  "short_name": "Lumastat",
+  "description": "Privacy-first web analytics without cookies or consent banners",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#F1EEE3",
+  "background_color": "#F1EEE3",
+  "display": "standalone",
+  "start_url": "/"
+}
