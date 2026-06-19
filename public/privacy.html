@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Polityka Prywatności — Lumastat</title>
+<meta name="description" content="Polityka prywatności serwisu Lumastat. Zbieramy wyłącznie adres e-mail w celu prowadzenia listy oczekujących." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://lumastat.com/privacy" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  background:#F1EEE3;color:#16160F;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:#7a4fb5;text-decoration:none}
+a:hover{text-decoration:underline}
+img,svg{display:block;max-width:100%}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 32px}
+
+/* NAV */
+.nav{padding:28px 0 0}
+.nav__inner{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:760px;margin:0 auto;padding:0 32px;
+}
+.nav__logo{display:flex;align-items:center;gap:6px;color:#16160F}
+.nav__logo-text{font-size:21px;font-weight:800;letter-spacing:-.02em}
+.nav__back{
+  font-size:14.5px;font-weight:600;color:#56564a;
+  display:flex;align-items:center;gap:6px;
+}
+.nav__back:hover{color:#16160F;text-decoration:none}
+
+/* HEADER */
+.doc-header{padding:52px 0 40px;border-bottom:1px solid #E0DCCD}
+.doc-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid #E4E0D2;
+  padding:6px 14px;border-radius:40px;
+  font-size:13px;font-weight:600;color:#2a2a20;margin-bottom:20px;
+}
+.doc-tag-dot{width:7px;height:7px;border-radius:50%;background:#D9A8F0;flex-shrink:0}
+.doc-h1{
+  font-size:clamp(32px,5vw,48px);line-height:1.02;
+  letter-spacing:-.03em;font-weight:800;margin:0 0 14px;
+}
+.doc-meta{font-size:14px;color:#7a7a6c;font-weight:500}
+
+/* CONTENT */
+.doc-body{padding:48px 0 80px}
+.doc-section{margin-bottom:44px}
+.doc-section:last-child{margin-bottom:0}
+.doc-h2{
+  font-size:22px;font-weight:700;letter-spacing:-.02em;
+  margin:0 0 14px;color:#16160F;
+}
+.doc-h2-num{
+  display:inline-block;width:28px;height:28px;
+  background:#16160F;color:#F1EEE3;
+  border-radius:8px;font-size:13px;font-weight:800;
+  text-align:center;line-height:28px;margin-right:10px;
+  flex-shrink:0;
+}
+.doc-p{font-size:16px;line-height:1.65;color:#3a3a2e;margin:0 0 12px}
+.doc-p:last-child{margin-bottom:0}
+.doc-ul{
+  margin:12px 0 12px 0;padding:0;list-style:none;
+  display:flex;flex-direction:column;gap:8px;
+}
+.doc-ul li{
+  display:flex;gap:12px;font-size:16px;line-height:1.55;color:#3a3a2e;
+}
+.doc-ul li::before{
+  content:'';flex-shrink:0;margin-top:8px;
+  width:6px;height:6px;border-radius:50%;background:#D9A8F0;
+}
+
+/* HIGHLIGHT BOX */
+.doc-box{
+  background:#fff;border:1px solid #E4E0D2;border-radius:18px;
+  padding:24px 26px;margin:20px 0;
+}
+.doc-box--dark{
+  background:#16160F;border:none;color:#F1EEE3;
+}
+.doc-box--dark .doc-p{color:#c9c8bc}
+.doc-box--dark .doc-ul li{color:#c9c8bc}
+.doc-box-title{
+  font-size:14px;font-weight:800;letter-spacing:.04em;
+  text-transform:uppercase;color:#7a4fb5;margin-bottom:10px;
+}
+.doc-box--dark .doc-box-title{color:#D9A8F0}
+
+/* TABLE */
+.doc-table-wrap{overflow-x:auto;margin:18px 0}
+.doc-table{
+  width:100%;border-collapse:collapse;font-size:15px;
+}
+.doc-table th{
+  text-align:left;font-weight:700;font-size:13px;
+  letter-spacing:.04em;text-transform:uppercase;color:#7a7a6c;
+  padding:12px 16px;border-bottom:2px solid #E0DCCD;
+}
+.doc-table td{
+  padding:14px 16px;border-bottom:1px solid #EEEADd;
+  color:#3a3a2e;vertical-align:top;
+}
+.doc-table tr:last-child td{border-bottom:none}
+
+/* FOOTER */
+.doc-footer{
+  border-top:1px solid #E0DCCD;
+  padding:32px 0 56px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+}
+.doc-footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.doc-footer-links a{font-size:14px;font-weight:600;color:#56564a}
+.doc-footer-copy{font-size:14px;color:#9a9a88}
+
+@media(max-width:600px){
+  .wrap,.nav__inner{padding:0 20px}
+  .doc-header{padding:36px 0 28px}
+  .doc-body{padding:32px 0 56px}
+  .doc-footer{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Lumastat home">
+      <svg width="24" height="29" viewBox="0 0 64 78" fill="none" aria-hidden="true">
+        <path d="M32,7 A21,21 0 0,1 44,45.2 L44,62 Q44,72 32,72 Q20,72 20,62 L20,45.2 A21,21 0 0,1 32,7Z" fill="#F1EEE3" stroke="#16160F" stroke-width="4.5" stroke-linejoin="round"/>
+        <line x1="20" y1="49" x2="44" y2="49" stroke="#16160F" stroke-width="4"/>
+        <line x1="20" y1="54.5" x2="44" y2="54.5" stroke="#16160F" stroke-width="4"/>
+        <line x1="20" y1="60" x2="44" y2="60" stroke="#16160F" stroke-width="4"/>
+        <circle cx="32" cy="28" r="13.5" fill="#F1EEE3" stroke="#D9A8F0" stroke-width="4"/>
+        <line x1="32" y1="28" x2="32" y2="14.5" stroke="#16160F" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="32" y1="28" x2="43.7" y2="34.75" stroke="#16160F" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="32" y1="28" x2="20.3" y2="34.75" stroke="#16160F" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav__logo-text">Lumastat</span>
+    </a>
+    <a href="/" class="nav__back">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Wróć na stronę główną
+    </a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="doc-header">
+    <div class="doc-tag"><span class="doc-tag-dot" aria-hidden="true"></span>Dokument prawny</div>
+    <h1 class="doc-h1">Polityka Prywatności</h1>
+    <p class="doc-meta">Ostatnia aktualizacja: 19 czerwca 2026 &nbsp;·&nbsp; Lumastat</p>
+  </header>
+
+  <main class="doc-body">
+
+    <div class="doc-box doc-box--dark" style="margin-bottom:36px">
+      <div class="doc-box-title">Podsumowanie (TL;DR)</div>
+      <p class="doc-p">Zbieramy wyłącznie Twój adres e-mail (i opcjonalnie adres Twojej strony) w celu prowadzenia listy oczekujących. Nie sprzedajemy danych, nie udostępniamy ich reklamodawcom, nie używamy plików cookie. Możesz poprosić o usunięcie swoich danych w dowolnej chwili, pisząc do nas e-maila.</p>
+    </div>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">1</span>Administrator danych</h2>
+      <p class="doc-p">Administratorem Twoich danych osobowych jest:</p>
+      <div class="doc-box">
+        <p class="doc-p" style="margin:0"><strong>Lumastat</strong><br>
+        E-mail: <a href="mailto:hello@lumastat.com">hello@lumastat.com</a><br>
+        Strona: <a href="https://lumastat.com">lumastat.com</a></p>
+      </div>
+      <p class="doc-p">Przetwarzamy dane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO/GDPR).</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">2</span>Jakie dane zbieramy i po co</h2>
+      <div class="doc-table-wrap">
+        <table class="doc-table" aria-label="Zbierane dane">
+          <thead>
+            <tr>
+              <th>Kategoria danych</th>
+              <th>Cel przetwarzania</th>
+              <th>Podstawa prawna</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Adres e-mail</strong></td>
+              <td>Powiadomienie o otwarciu dostępu do Lumastat; komunikacja dotycząca statusu beta</td>
+              <td>Art. 6 ust. 1 lit. a RODO — zgoda</td>
+            </tr>
+            <tr>
+              <td><strong>URL strony internetowej</strong> (opcjonalnie)</td>
+              <td>Lepsze dopasowanie oferty do Twoich potrzeb; priorytetyzacja dostępu do bety</td>
+              <td>Art. 6 ust. 1 lit. a RODO — zgoda</td>
+            </tr>
+            <tr>
+              <td><strong>Dane techniczne żądania HTTP</strong> (adres IP, nagłówki przeglądarki)</td>
+              <td>Bezpieczeństwo serwisu, ochrona przed spamem i atakami; dane niezbędne do obsługi każdego połączenia</td>
+              <td>Art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="doc-p">Nie zbieramy imienia, nazwiska, numeru telefonu ani żadnych szczególnych kategorii danych wymienionych w art. 9 RODO.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">3</span>Jak długo przechowujemy dane</h2>
+      <ul class="doc-ul">
+        <li><strong>Lista oczekujących (e-mail + URL):</strong> do momentu uruchomienia produktu lub do czasu wycofania zgody — zależnie od tego, co nastąpi wcześniej. Po uruchomieniu przeniesiemy Cię do bazy klientów lub usuniemy Twoje dane, jeśli nie zdecydujesz się korzystać z serwisu.</li>
+        <li><strong>Dane techniczne (logi):</strong> maksymalnie 30 dni, po czym są automatycznie usuwane.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">4</span>Komu przekazujemy dane</h2>
+      <p class="doc-p">Nie sprzedajemy Twoich danych. Możemy korzystać z następujących procesorów danych (podwykonawców):</p>
+      <ul class="doc-ul">
+        <li><strong>Dostawca hostingu / infrastruktury:</strong> serwery zlokalizowane w Europejskim Obszarze Gospodarczym (EOG). Dane nie opuszczają EOG.</li>
+        <li><strong>Dostawca usługi e-mail transakcyjnego</strong> (np. Resend lub Mailgun): wyłącznie w celu wysłania powiadomień dotyczących listy oczekujących. Dane przetwarzane zgodnie ze standardowymi klauzulami umownymi UE.</li>
+      </ul>
+      <p class="doc-p">Każdy podmiot przetwarzający jest zobowiązany umową do stosowania odpowiednich środków bezpieczeństwa i nieprzetwarzania danych w celach innych niż uzgodnione.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">5</span>Pliki cookie i śledzenie</h2>
+      <div class="doc-box">
+        <div class="doc-box-title">Brak plików cookie</div>
+        <p class="doc-p">Strona lumastat.com <strong>nie używa żadnych plików cookie</strong> — ani niezbędnych, ani analitycznych, ani marketingowych. Nie ma tu żadnego banera cookie, bo nie ma powodu, żeby był.</p>
+        <p class="doc-p">Nie korzystamy z Google Analytics, Facebook Pixel ani żadnego innego zewnętrznego narzędzia śledzącego na tej stronie.</p>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">6</span>Twoje prawa</h2>
+      <p class="doc-p">Na mocy RODO przysługują Ci następujące prawa:</p>
+      <ul class="doc-ul">
+        <li><strong>Prawo dostępu</strong> — możesz zażądać kopii przechowywanych danych.</li>
+        <li><strong>Prawo do sprostowania</strong> — możesz poprosić o korektę błędnych danych.</li>
+        <li><strong>Prawo do usunięcia</strong> — możesz poprosić o usunięcie swoich danych z listy oczekujących w dowolnym momencie.</li>
+        <li><strong>Prawo do ograniczenia przetwarzania</strong> — możesz zażądać wstrzymania przetwarzania danych.</li>
+        <li><strong>Prawo do przenoszenia danych</strong> — możesz otrzymać dane w formacie nadającym się do odczytu maszynowego.</li>
+        <li><strong>Prawo do cofnięcia zgody</strong> — cofnięcie zgody nie wpływa na zgodność z prawem przetwarzania, które miało miejsce przed jej cofnięciem.</li>
+        <li><strong>Prawo do wniesienia skargi</strong> — masz prawo wnieść skargę do krajowego organu nadzorczego, w Polsce jest to <a href="https://uodo.gov.pl" target="_blank" rel="noopener">Urząd Ochrony Danych Osobowych (UODO)</a>.</li>
+      </ul>
+      <p class="doc-p">Aby skorzystać z któregokolwiek z powyższych praw, wyślij wiadomość na adres <a href="mailto:hello@lumastat.com">hello@lumastat.com</a>. Odpowiemy w ciągu 30 dni.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">7</span>Bezpieczeństwo danych</h2>
+      <p class="doc-p">Stosujemy odpowiednie środki techniczne i organizacyjne, aby chronić Twoje dane przed nieautoryzowanym dostępem, utratą lub zniszczeniem, w tym:</p>
+      <ul class="doc-ul">
+        <li>Szyfrowanie połączeń z użyciem TLS (HTTPS).</li>
+        <li>Ograniczony dostęp do bazy danych — wyłącznie dla upoważnionych członków zespołu.</li>
+        <li>Przechowywanie danych wyłącznie na serwerach w EOG.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">8</span>Linki zewnętrzne</h2>
+      <p class="doc-p">Strona może zawierać linki do zewnętrznych serwisów. Niniejsza polityka prywatności nie obejmuje tych serwisów. Zalecamy zapoznanie się z politykami prywatności odwiedzanych stron trzecich.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">9</span>Zmiany polityki prywatności</h2>
+      <p class="doc-p">Możemy od czasu do czasu aktualizować niniejszy dokument. O istotnych zmianach poinformujemy subskrybentów listy oczekujących za pośrednictwem poczty e-mail. Data aktualizacji jest widoczna na górze strony.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">10</span>Kontakt</h2>
+      <div class="doc-box">
+        <p class="doc-p" style="margin:0">W przypadku pytań lub wniosków dotyczących prywatności prosimy o kontakt:<br>
+        <strong>E-mail:</strong> <a href="mailto:hello@lumastat.com">hello@lumastat.com</a><br>
+        Staramy się odpowiadać w ciągu 2 dni roboczych.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    <div class="doc-footer-links">
+      <a href="/">Strona główna</a>
+      <a href="/terms">Regulamin</a>
+      <a href="mailto:hello@lumastat.com">Kontakt</a>
+    </div>
+    <span class="doc-footer-copy">© 2026 Lumastat</span>
+  </footer>
+
+</div>
+</body>
+</html>

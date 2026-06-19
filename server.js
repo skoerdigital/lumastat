@@ -135,6 +135,10 @@ app.post('/api/waitlist', (req, res) => {
   res.json({ status: 'success', message: "You're on the list.", position: waitlist.length });
 });
 
+// ── Legal pages ───────────────────────────────────────────────────────────────
+app.get('/privacy', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'privacy.html')));
+app.get('/terms',   (_req, res) => res.sendFile(path.join(__dirname, 'public', 'terms.html')));
+
 // ── Fallback → SPA ────────────────────────────────────────────────────────────
 app.use((_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 

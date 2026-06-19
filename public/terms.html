@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Regulamin — Lumastat</title>
+<meta name="description" content="Regulamin korzystania z serwisu Lumastat i listy oczekujących na dostęp do narzędzia analityki webowej." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://lumastat.com/terms" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  background:#F1EEE3;color:#16160F;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:#7a4fb5;text-decoration:none}
+a:hover{text-decoration:underline}
+img,svg{display:block;max-width:100%}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 32px}
+
+/* NAV */
+.nav{padding:28px 0 0}
+.nav__inner{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:760px;margin:0 auto;padding:0 32px;
+}
+.nav__logo{display:flex;align-items:center;gap:6px;color:#16160F}
+.nav__logo-text{font-size:21px;font-weight:800;letter-spacing:-.02em}
+.nav__back{
+  font-size:14.5px;font-weight:600;color:#56564a;
+  display:flex;align-items:center;gap:6px;
+}
+.nav__back:hover{color:#16160F;text-decoration:none}
+
+/* HEADER */
+.doc-header{padding:52px 0 40px;border-bottom:1px solid #E0DCCD}
+.doc-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid #E4E0D2;
+  padding:6px 14px;border-radius:40px;
+  font-size:13px;font-weight:600;color:#2a2a20;margin-bottom:20px;
+}
+.doc-tag-dot{width:7px;height:7px;border-radius:50%;background:#F3E04E;flex-shrink:0}
+.doc-h1{
+  font-size:clamp(32px,5vw,48px);line-height:1.02;
+  letter-spacing:-.03em;font-weight:800;margin:0 0 14px;
+}
+.doc-meta{font-size:14px;color:#7a7a6c;font-weight:500}
+
+/* CONTENT */
+.doc-body{padding:48px 0 80px}
+.doc-section{margin-bottom:44px}
+.doc-section:last-child{margin-bottom:0}
+.doc-h2{
+  font-size:22px;font-weight:700;letter-spacing:-.02em;
+  margin:0 0 14px;color:#16160F;
+}
+.doc-h2-num{
+  display:inline-block;width:28px;height:28px;
+  background:#16160F;color:#F1EEE3;
+  border-radius:8px;font-size:13px;font-weight:800;
+  text-align:center;line-height:28px;margin-right:10px;
+  flex-shrink:0;
+}
+.doc-p{font-size:16px;line-height:1.65;color:#3a3a2e;margin:0 0 12px}
+.doc-p:last-child{margin-bottom:0}
+.doc-ul{
+  margin:12px 0 12px 0;padding:0;list-style:none;
+  display:flex;flex-direction:column;gap:8px;
+}
+.doc-ul li{
+  display:flex;gap:12px;font-size:16px;line-height:1.55;color:#3a3a2e;
+}
+.doc-ul li::before{
+  content:'';flex-shrink:0;margin-top:8px;
+  width:6px;height:6px;border-radius:50%;background:#F3E04E;
+}
+
+/* HIGHLIGHT BOX */
+.doc-box{
+  background:#fff;border:1px solid #E4E0D2;border-radius:18px;
+  padding:24px 26px;margin:20px 0;
+}
+.doc-box--dark{
+  background:#16160F;border:none;color:#F1EEE3;
+}
+.doc-box--dark .doc-p{color:#c9c8bc}
+.doc-box--dark .doc-ul li{color:#c9c8bc}
+.doc-box-title{
+  font-size:14px;font-weight:800;letter-spacing:.04em;
+  text-transform:uppercase;color:#7a4fb5;margin-bottom:10px;
+}
+.doc-box--dark .doc-box-title{color:#D9A8F0}
+
+/* FOOTER */
+.doc-footer{
+  border-top:1px solid #E0DCCD;
+  padding:32px 0 56px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+}
+.doc-footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.doc-footer-links a{font-size:14px;font-weight:600;color:#56564a}
+.doc-footer-copy{font-size:14px;color:#9a9a88}
+
+@media(max-width:600px){
+  .wrap,.nav__inner{padding:0 20px}
+  .doc-header{padding:36px 0 28px}
+  .doc-body{padding:32px 0 56px}
+  .doc-footer{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Lumastat home">
+      <svg width="24" height="29" viewBox="0 0 64 78" fill="none" aria-hidden="true">
+        <path d="M32,7 A21,21 0 0,1 44,45.2 L44,62 Q44,72 32,72 Q20,72 20,62 L20,45.2 A21,21 0 0,1 32,7Z" fill="#F1EEE3" stroke="#16160F" stroke-width="4.5" stroke-linejoin="round"/>
+        <line x1="20" y1="49" x2="44" y2="49" stroke="#16160F" stroke-width="4"/>
+        <line x1="20" y1="54.5" x2="44" y2="54.5" stroke="#16160F" stroke-width="4"/>
+        <line x1="20" y1="60" x2="44" y2="60" stroke="#16160F" stroke-width="4"/>
+        <circle cx="32" cy="28" r="13.5" fill="#F1EEE3" stroke="#D9A8F0" stroke-width="4"/>
+        <line x1="32" y1="28" x2="32" y2="14.5" stroke="#16160F" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="32" y1="28" x2="43.7" y2="34.75" stroke="#16160F" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="32" y1="28" x2="20.3" y2="34.75" stroke="#16160F" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav__logo-text">Lumastat</span>
+    </a>
+    <a href="/" class="nav__back">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Wróć na stronę główną
+    </a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="doc-header">
+    <div class="doc-tag"><span class="doc-tag-dot" aria-hidden="true"></span>Dokument prawny</div>
+    <h1 class="doc-h1">Regulamin</h1>
+    <p class="doc-meta">Ostatnia aktualizacja: 19 czerwca 2026 &nbsp;·&nbsp; Lumastat</p>
+  </header>
+
+  <main class="doc-body">
+
+    <div class="doc-box doc-box--dark" style="margin-bottom:36px">
+      <div class="doc-box-title">Podsumowanie (TL;DR)</div>
+      <p class="doc-p">Lumastat jest narzędziem analitycznym, które jest aktualnie w fazie prywatnej bety. Rejestrując się na listę oczekujących, akceptujesz niniejszy regulamin. Korzystaj z serwisu zgodnie z prawem. Zastrzegamy sobie prawo do usunięcia zgłoszeń naruszających regulamin.</p>
+    </div>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">1</span>Definicje</h2>
+      <ul class="doc-ul">
+        <li><strong>„Lumastat"</strong> — serwis analityki webowej dostępny pod adresem lumastat.com, prowadzony przez Lumastat.</li>
+        <li><strong>„Lista oczekujących"</strong> — formularz i baza danych osób zainteresowanych wczesnym dostępem do Lumastat.</li>
+        <li><strong>„Użytkownik"</strong> — każda osoba fizyczna lub prawna, która zapisuje się na listę oczekujących lub korzysta z serwisu.</li>
+        <li><strong>„Usługa"</strong> — narzędzie analityki webowej udostępniane przez Lumastat, w tym wszelkie jego funkcje i interfejsy.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">2</span>Akceptacja regulaminu</h2>
+      <p class="doc-p">Wypełniając formularz listy oczekujących lub korzystając z serwisu Lumastat, akceptujesz niniejszy Regulamin oraz <a href="/privacy">Politykę Prywatności</a>. Jeśli nie akceptujesz tych warunków, nie zapisuj się na listę oczekujących i nie korzystaj z serwisu.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">3</span>Lista oczekujących i dostęp do bety</h2>
+      <ul class="doc-ul">
+        <li>Zapis na listę oczekujących jest bezpłatny i nie zobowiązuje do zakupu.</li>
+        <li>Zaproszenie do bety nie jest gwarantowane — wysyłamy je według własnego uznania, biorąc pod uwagę kolejność zgłoszeń i inne czynniki.</li>
+        <li>Jeden adres e-mail może figurować na liście tylko raz. Duplikaty są usuwane.</li>
+        <li>Możemy zakończyć lub modyfikować listę oczekujących w dowolnym momencie bez podania przyczyny.</li>
+        <li>Zapisując się, zgadzasz się na otrzymanie wiadomości e-mail dotyczącej statusu Twojego zgłoszenia i uruchomienia produktu. Nie wysyłamy newsletterów marketingowych bez odrębnej zgody.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">4</span>Dozwolone korzystanie z serwisu</h2>
+      <p class="doc-p">Korzystając z serwisu lub listy oczekujących, zobowiązujesz się, że:</p>
+      <ul class="doc-ul">
+        <li>Podajesz prawdziwe i aktualne dane (w szczególności prawidłowy adres e-mail).</li>
+        <li>Nie będziesz używał serwisu w celach sprzecznych z obowiązującym prawem.</li>
+        <li>Nie będziesz podejmował prób nieautoryzowanego dostępu do systemów Lumastat.</li>
+        <li>Nie będziesz rejestrował się wielokrotnie w celu obejścia ograniczeń dostępu.</li>
+        <li>Nie będziesz korzystał z automatycznych narzędzi (botów, scraperów) do interakcji z serwisem.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">5</span>Własność intelektualna</h2>
+      <p class="doc-p">Wszelkie treści dostępne w serwisie Lumastat — w tym nazwa, logo, szata graficzna, kod, teksty i oprogramowanie — są własnością Lumastat lub podmiotów licencjonujących i podlegają ochronie na podstawie przepisów prawa autorskiego oraz innych przepisów o własności intelektualnej.</p>
+      <p class="doc-p">Nie wolno kopiować, reprodukować, modyfikować ani dystrybuować żadnych elementów serwisu bez uprzedniej pisemnej zgody Lumastat, z wyjątkiem przypadków dozwolonego użytku przewidzianych przez prawo.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">6</span>Wyłączenie odpowiedzialności</h2>
+      <div class="doc-box">
+        <div class="doc-box-title">Faza beta</div>
+        <p class="doc-p">Lumastat jest w fazie prywatnej bety. Serwis jest udostępniany w stanie „takim, jaki jest" (<em>as is</em>), bez jakichkolwiek gwarancji — w tym gwarancji dostępności, bezbłędnego działania, przydatności do określonego celu.</p>
+      </div>
+      <p class="doc-p">W maksymalnym zakresie dopuszczalnym przez prawo Lumastat nie ponosi odpowiedzialności za:</p>
+      <ul class="doc-ul">
+        <li>Przerwy w działaniu serwisu lub utratę danych.</li>
+        <li>Decyzje biznesowe podjęte na podstawie danych analitycznych dostarczonych przez Lumastat.</li>
+        <li>Pośrednie, przypadkowe lub wynikowe straty Użytkownika.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">7</span>Cennik i płatności</h2>
+      <p class="doc-p">Korzystanie z listy oczekujących oraz dostęp do prywatnej bety jest bezpłatny. Przed uruchomieniem płatnej wersji poinformujemy Cię o warunkach cenowych z odpowiednim wyprzedzeniem.</p>
+      <p class="doc-p">Warunki płatności, okresy rozliczeniowe i zasady zwrotów zostaną szczegółowo określone w odrębnym dokumencie w momencie wprowadzenia płatnego planu.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">8</span>Rozwiązanie i usunięcie konta</h2>
+      <ul class="doc-ul">
+        <li>Możesz w każdej chwili poprosić o usunięcie swojego adresu e-mail z listy oczekujących, wysyłając wiadomość na adres <a href="mailto:hello@lumastat.com">hello@lumastat.com</a>.</li>
+        <li>Lumastat zastrzega sobie prawo do usunięcia zgłoszenia Użytkownika, który narusza niniejszy Regulamin, bez wcześniejszego powiadomienia.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">9</span>Prawo właściwe i jurysdykcja</h2>
+      <p class="doc-p">Niniejszy Regulamin podlega prawu polskiemu. Wszelkie spory wynikające z Regulaminu będą rozstrzygane przez sądy powszechne właściwe dla siedziby Lumastat.</p>
+      <p class="doc-p">Jeśli jesteś konsumentem zamieszkałym w Unii Europejskiej, możesz również skorzystać z unijnej platformy internetowego rozstrzygania sporów (ODR) dostępnej pod adresem <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">10</span>Zmiany regulaminu</h2>
+      <p class="doc-p">Lumastat zastrzega sobie prawo do zmiany niniejszego Regulaminu w dowolnym momencie. O istotnych zmianach poinformujemy osoby zapisane na listę oczekujących za pośrednictwem poczty e-mail z co najmniej 7-dniowym wyprzedzeniem przed wejściem zmian w życie.</p>
+      <p class="doc-p">Dalsze korzystanie z serwisu po wejściu zmian w życie oznacza ich akceptację.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2 class="doc-h2"><span class="doc-h2-num" aria-hidden="true">11</span>Kontakt</h2>
+      <div class="doc-box">
+        <p class="doc-p" style="margin:0">W przypadku pytań dotyczących Regulaminu skontaktuj się z nami:<br>
+        <strong>E-mail:</strong> <a href="mailto:hello@lumastat.com">hello@lumastat.com</a><br>
+        Odpowiadamy w ciągu 2 dni roboczych.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    <div class="doc-footer-links">
+      <a href="/">Strona główna</a>
+      <a href="/privacy">Polityka prywatności</a>
+      <a href="mailto:hello@lumastat.com">Kontakt</a>
+    </div>
+    <span class="doc-footer-copy">© 2026 Lumastat</span>
+  </footer>
+
+</div>
+</body>
+</html>
